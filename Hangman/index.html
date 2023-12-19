@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hangman</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="popup-name">
+        <div class="result-wrapper">
+          <p>The word was:</p>
+          <p id="hidden-word"></p>
+        </div>
+        <h1>Enter name</h1>
+        <input id="name" placeholder="Name" />
+        <div class="btn-container">
+          <button onclick="submitName()">Submit</button>
+          <button onclick="restart()" class="restartBtn">Restart</button>
+        </div>
+      </div>
+      <div class="popup-highscores">
+        <h1>Highscores</h1>
+        <ol class="score-list"></ol>
+        <div class="btn-container">
+          <button onclick="restart()" class="restartBtn">Restart</button>
+        </div>
+      </div>
+      <div class="popup-success">
+        <h1>Congratulations!</h1>
+        <p>+3 Hints</p>
+        <div class="btn-container">
+          <button onclick="initNextLevel()" class="restartBtn">
+            Next level
+          </button>
+        </div>
+      </div>
+      <div class="score-container">
+        <span>Score:</span>
+        <p class="score">0</p>
+      </div>
+      <div class="hint-container">
+        <button onclick="revealHint()">Hint</button>
+        <p class="hint">3</p>
+      </div>
+      <div class="timer-container"><p class="timer">60</p></div>
+      <div class="hangman-container">
+        <div class="hangman">
+          <div class="rope"></div>
+          <div class="head"></div>
+          <div class="body"></div>
+          <div class="l-arm"></div>
+          <div class="r-arm"></div>
+          <div class="l-leg"></div>
+          <div class="r-leg"></div>
+        </div>
+      </div>
+      <div class="letters"></div>
+      <div class="text-controls">
+        <p class="streak"></p>
+        <div class="text-wrapper"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
